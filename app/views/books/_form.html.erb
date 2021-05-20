@@ -21,6 +21,12 @@
     <%= f.text_area :body %>
   </div>
 
+  <div class="field">
+    <%= f.label :genre %>
+    <%= f.select :genre, Book.genres.keys.to_a, {} %>
+
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -14,6 +14,7 @@
       <tr>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
+        <td><%= book.genre%></td>
         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
         <td><%= link_to "Edit", "/books/#{book.id}/edit" %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
