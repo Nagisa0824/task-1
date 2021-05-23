@@ -21,13 +21,30 @@
     <%= f.text_area :body %>
   </div>
 
-  <div class="field">
+　<div class="field">
     <%= f.label :genre %>
     <%= f.select :genre, Book.genres.keys.to_a, {} %>
+　</div>
 
+
+  <div>
+
+    <labe><%= f.radio_button :genre,"1" %>ジャンル</labe>
+      <%= f.collection_select :body, Book.all, :id ,:body %>
+    </div>
+
+  <div>
+    <%= f.label :prodction %>
+    <%= f.select :prodction, Book.prodctions.keys.to_a, {} %>
+  </div>
+  <div>
+    <%= f.label :status %>
+    <%= f.select :status, Book.statuses.keys.to_a, {} %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+rails g migration AddProfileImageIdToUsers profile_image_id:string

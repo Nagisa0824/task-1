@@ -1,5 +1,5 @@
 <h1>Books1</h1>
-
+<%= link_to "ユーザー", users_path %>
 <table>
   <thead>
     <tr>
@@ -14,7 +14,10 @@
       <tr>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
-        <td><%= book.genre%></td>
+        <td><%= book.genre %></td>
+        <td><%= book.prodction %></td>
+        <td><%= book.status %></td>
+        <td><%= book.created_at.strftime("%Y年%m月%d日%H時%M分") %></td>
         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
         <td><%= link_to "Edit", "/books/#{book.id}/edit" %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
